@@ -1,0 +1,1401 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0px;
+    color: #000;
+   /* font-family: 'Mirza', cursive;
+    font-family: 'Federo', sans-serif;*/
+    font-family: 'Merriweather Sans', sans-serif;
+    overflow-x: hidden;
+    background-color: #fff;
+}
+body, html{
+    max-width: 1400px;
+    margin: auto;
+    scroll-behavior: smooth;
+
+}
+
+/*------------------------------------*/
+/*------navigation--------------------*/
+
+.headerWrapper
+{
+    background: #000;
+    position: relative;
+
+}
+nav
+{   
+    width: 100%;
+    height: 80px;
+}
+#sidebar
+{
+    position: absolute;
+    top: 80px;
+    width: 250px;
+   /* height: -webkit-fill-available;*/
+    background: #151719;
+    left: -250px; 
+    transition: all 500ms linear;
+    z-index: 1;
+}
+#sidebar.active 
+{
+    left: 0px;
+}
+#sidebar ul
+{
+    margin-left: -40px;
+    margin-bottom: auto;
+}
+#sidebar ul li 
+{
+    list-style: none;
+    padding:15px 10px;
+    text-align: center;
+    border-bottom: 1px solid rgb(100,100,100,0.3);
+    
+}
+#sidebar ul li a
+{
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color:rgb(230,230,230,0.9);
+}
+.toggle-btn
+{
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    cursor: pointer;
+
+
+}
+a.active{
+    left: 30px;
+}
+.toggle-btn.active{
+    left:30px;
+}
+.toggle-btn span
+{
+    display: block;
+    width: 30px;
+    height: 5px;
+    background: #f7f7f7;
+    margin: 3px 0px;
+
+}
+.logo
+{
+    background: #000;
+    width: 138px;
+    position: absolute;
+    left: 80px;
+    top: 10px;
+}
+
+/*------------end of navigation------*/
+
+/*----------- Menu ------------------*/
+.menuHeader
+{
+    width: 100%;
+    height: 500px;
+}
+.menuWrapper
+{
+    height: 100%;
+    background-color: #0008;
+    
+}
+.menuwrapper p
+{
+    margin: 0;
+}
+.menuwrapper h1
+{
+    font-size: 50px;
+    font-weight: 600px;
+    margin: 0;
+}
+.menuText
+{
+   position: absolute;
+    top: 100px;
+    left: 20%;
+    right: 20%;
+    width: auto;
+}
+.menuText h1
+{
+font-family:'Kaushan Script', cursive/* 'Amatic SC', cursive*/;
+color: #fff;
+margin: 20px 0px;
+font-size: 70px;
+font-weight: 600;
+text-align: center;
+word-break: break-word;
+    
+}
+
+.menuwrapper
+{
+ padding: 5% 0;
+ font-family:'Kaushan Script', cursive;
+}
+
+.menu_heading
+{
+
+box-shadow: 2px 2px 18px 0px rgba(56,56,56,0.1);
+box-sizing: border-box;
+margin-bottom: 5px;
+}
+.menu_heading a
+{
+   
+}
+.menu_heading .btn.collapsed:after
+{
+   -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    transform: rotate(-90deg);  
+}
+.menu_heading .btn:after
+{  
+
+    font-family: 'Glyphicons Halflings';
+   content: "\e114";
+   float: right;
+   transition: all 0.5s;
+
+}
+
+.collapse
+{
+    padding:10px;
+    background: #f7f7f7;
+}
+#show{
+    display: none;
+}
+
+.fa-rupee-sign
+{
+    font-size: 
+}
+.inc_dec {
+    display: flex;
+    margin-bottom: 14px;
+    justify-content: center;
+   /* display: none;*/
+}
+
+ 
+
+
+.item
+{
+    width: 100%;
+
+}
+.itemPrice
+{
+    padding: 5px;
+}
+
+.itemPrice p
+{
+    margin-bottom:0;
+}
+.custm
+{
+    font-size: 10px;
+    color:red;
+}
+.inc_dec input {
+    width: 30px;
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid #f44336;
+    margin: 0px 10px;
+    height: 30px;
+    text-align: center;
+}
+
+.alter {
+    background: transparent;
+    border-radius: 50px;
+    border: 2px solid #f44336;;
+    margin: 0px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+}
+
+.addbtn
+{
+    background: transparent;
+    border: 2px solid #f44336;
+    width: 60px;
+    height: 30px;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 0;
+    border-radius: 10px;
+    color:#f44336;
+}
+.diet
+{
+    padding: 0;
+}
+.item h4
+{
+ padding-left: 5px;
+ padding-top: 2px;
+ font-weight: 500;
+ text-transform: capitalize;
+}
+
+
+/*------------view cart -------*/
+
+/* -----------Modal ADDOns------*/
+.modal1 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+  height: 100%;
+    background: #fff;
+}
+.flex-container
+    {
+        display:flex;
+        padding-bottom: 10px;
+    }
+    .addItem
+    {
+      position: fixed;
+    bottom:0;
+    }
+    .modal1 .modal-dialog 
+    {
+        max-width: 100%;
+        margin: auto;
+        height: 100%;
+
+    }
+.modal1 .modal-footer
+{
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.fa-arrow-left
+{
+    font-size: 16px;
+    color:red;
+}
+.custamization
+{
+    padding: 0px 10px;
+}
+.custamizationHeader
+{
+    padding:30px 0 10px 0px;
+}
+.customizationWrapper
+{   
+    position: relative;
+    padding:20px; 
+}
+.customizationWrapper span
+{
+    color:red;
+    font-size: 10px;
+}
+.custombody
+{
+    padding-top:20px; 
+}
+.flex-container label
+{
+    width: 90%;
+}
+.modal1 .modal-header
+{
+   border:0;
+   padding: 20px;
+}
+.modal-content
+{
+    border: 0;
+}
+
+.style_checkBox input ,.style_radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    display: none;
+}
+ .style_checkBox ,.style_radio {
+    display: block;
+    position: relative;
+    padding-left: 33px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    line-height: 19px;
+    color: #000;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* On mouse-over, add a grey background color */
+
+.style_checkBox:hover input~.style_checkBox_mark {
+    background-color: transparent;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.style_checkBox input:checked~.style_checkBox_mark {
+    /*background-color: #019cdf;*/
+    background: transparent;
+    border-color: lightcoral;
+}
+
+ .style_checkBox input:checked~ div 
+{
+    
+ color:red;
+}   
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.style_checkBox_mark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.style_checkBox input:checked~.style_checkBox_mark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.style_checkBox .style_checkBox_mark:after {
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 11px;
+    border: solid lightcoral;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+
+
+
+.style_radio_mark
+{
+    width: 20px;
+    height: 20px;
+    border: 2px solid  #888;
+    border-radius: 50px;
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 0;
+}
+.style_radio_mark span
+{
+    width: 12px;
+    height: 12px;
+    border: 1px solid lightcoral;
+    display: none;
+    border-radius: 50px;
+    margin: 2px;
+    background-color: lightcoral;
+}
+.style_radio input:checked~ .style_radio_mark span
+{
+    color:lightcoral;
+    display: block;
+}
+.style_radio input:checked~ .style_radio_mark  
+{
+    border: 2px solid lightcoral;
+
+}
+
+
+/*-end check box css--*/
+
+.style_checkBox_mark {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border-radius: 3px;
+    border: 2px solid #888;
+    background-color: transparent;
+}
+.addItem
+{
+    width: 90%;
+    margin: auto;
+}
+.extraTop
+{
+    padding-bottom: 50px;
+    position: relative;
+}
+.custmAddBtn
+{
+    width: 100%;
+     height: 50px;
+     font-size: 14px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    background: #f44336;
+    color: #fff;
+}
+
+
+.modal-backdrop 
+{
+  background: #0008;
+}
+.sum_form_style .form-group {
+    margin-bottom: 40px;
+}
+.sum_form_style label
+{
+  font-size: 14px;
+}
+.sum_form_style span
+{
+  font-size: 12px;
+}
+
+.sum_form_style .form-control {
+    border-radius: 0px;
+    border-color: transparent;
+    background-color: transparent;
+    border-bottom-color: #ddd;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.56px;
+    font-weight: 400;
+    padding-left: 0px;
+    /*color: #707884;*/
+    color: #000;
+    font-weight: 300;
+    box-shadow: none;
+    z-index: 2;
+    position: relative;
+}
+
+/*-----------------------------------*/
+/*-----------ADDOns repeat-----------*/
+.modal2
+{
+ position: fixed;
+  /*background: rgba(0,0,0,0.8);*/
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+background: transparent; 
+}
+
+
+.modal2 .modal-dialog
+{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    margin:auto;
+}
+.addnew
+{
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    background: transparent;
+    border: 2px solid #f44336;
+    color: #f44336;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+.repeat
+{
+    color: #000;
+    border: 2px solid #000;
+}
+
+/*-------------------------------------*/
+/*----------ViewCart-------------------*/
+.cart
+{
+    position: fixed;
+    bottom: 0; 
+    background: #004567; 
+    width:100%;
+    height: 70px;
+    display:none;
+    z-index:11111;
+    background-color: #f44336;
+}
+.viewcart
+{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    color:#fff;
+}
+
+.cartText
+{
+    width: 50%;
+    padding: 5px 10px;
+    color: #fff;
+}
+.viewcartitem
+{
+    width: 10px;
+    background: #f44336;
+    border: 0;
+    color: #fff;
+}
+
+/*-------------------------------------*/
+ 
+.CartHeader
+{
+  padding:30px 20px;
+}
+.CartHeader span
+{
+  font-size: 24px;
+    padding-left: 20px;
+}
+.cart-item
+ {
+  padding: 15px 0px;
+    border: 1px 1px;
+    /* border: 1px solid; */
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+    margin: 10px;
+    margin-bottom: 0px;
+    /*box-sizing: border-box;*/
+
+
+ }
+ .nopadding
+ {
+  padding-bottom: 0px;
+ }
+ .varying
+ {
+  padding-left: 60px;
+ }
+ .total-item
+ {
+    border-top: 1px solid #dadada;
+    border-bottom: 1px solid #dadada;
+   margin:  0px 10px 10px 10px;
+    padding: 15px 5px;
+    padding-bottom: 0px;
+     color: #9f9393;
+    
+    
+ }
+
+ .quantity
+ {
+  margin-top: 10px;
+
+ }
+ .itemTotal
+ {
+   width: 80%;
+   letter-spacing: 2px;
+   font-weight: 600;
+   color:#9f9393;
+ }
+ .totalPrice
+ {
+  margin: auto;
+ }
+
+ .orderplace a
+ {
+    color: white;
+ }
+ .specialInstruct
+ {
+  padding: 10px;
+ }
+ .instructionClose
+ {
+  margin-left: 0;
+ }
+ .modalHeader
+ {
+  padding: 10px;
+    border-bottom: 1px solid #dadada;
+    background: #f7f7f7;
+    font-weight: 600;
+    text-transform: capitalize;
+ }
+ .modalHeader button
+ {
+  background: none;
+    border: 0;
+    color: #f44336  ;
+    float: left;
+    margin-left: 10px;
+
+ }
+.modalHeader button:after
+{
+ font-family: 'Glyphicons Halflings';
+   content: "\e114";
+}
+.orderplace
+{
+  padding: 20px;
+  background: #f7f7f7;
+  margin: 10px;
+  width: 100%;
+}
+.place
+{
+  width: 150px;
+    height: 50px;
+    color: #fff;
+    background-color: #f44336;
+    font-size: 16px;
+}
+.modal3 .modal-dialog
+{
+    
+    width: 100%;
+    max-width: 100%;
+    margin:auto;
+    background: #0008;
+}
+.modal3 .modal-dialog .modal-content
+{
+position: fixed;
+bottom: 0;
+}
+
+/*----------------------------------------*/
+
+/*----------------OrdrePayment-------------*/
+
+.wallets
+{ 
+  position: relative;
+  width: 100%;
+    padding: 10px 0px;
+    margin: 5px 0px;
+    border-top: 1px solid #dadada;
+    display: flex;
+}
+.proceed
+{
+  position: absolute;
+  right: 0;
+}
+
+.proceed:after
+{  
+
+    font-family: 'Glyphicons Halflings';
+   content: "\e080";
+   float: right;
+   color:#0008;
+
+}
+
+.wallets.ww
+{
+   border-bottom:  1px solid #dadada;
+}
+ .order 
+ {
+padding-top: 20px;
+ }
+.imgborder
+{
+  border: 1px solid #dadada;
+  padding:5px;
+}
+.icons
+{
+width: 50px;
+}
+/*----------------------------------------*/
+/*----------payment link--------------------*/
+.country-code
+{
+  width:10%;
+  padding: 6px -1px 7px;
+  text-align: center;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #dadada;
+}
+.separator
+{
+ display: inline-block; 
+}
+.user-phone
+{
+  border: none;
+  border-bottom: 1px solid #dadada;
+}
+.code
+{
+     padding-left: 68px;
+    font-size: 11px;
+    color: #7e7272;
+}
+.email
+{
+  font-size: 11px;
+  color: #7e7272;
+}
+.india
+{
+  width: 100px;
+  display: flex;
+  
+}
+.india_code
+{
+  padding: 0;
+  width: 50px;
+  margin-left: 28px;
+
+}
+.link p
+{
+  font-size: 10px;
+}
+
+.form-group
+{
+  position: relative;
+}
+.sum_form_style .form-group {
+    margin-bottom: 40px;
+}
+
+.sum_form_style .form-control {
+    border-radius: 0px;
+    border-color: transparent;
+    background-color: transparent;
+    border-bottom-color: #ddd;
+    font-size: 18px;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.2;
+    letter-spacing: 0.56px;
+    font-weight: 400;
+    padding-left: 0px;
+    /*color: #707884;*/
+    color: #000;
+    font-weight: 300;
+    box-shadow: none;
+    z-index: 2;
+    position: relative;
+}
+
+
+.sum_form_style .form-control:focus {
+    box-shadow: none;
+}
+
+.sum_form_style .label_trans.focused .form-control {
+    color: ##1f1b1;
+}
+
+.sum_form_style input.form-control {
+    height: 50px;
+}
+
+
+.sum_form_style .label_trans {
+    position: relative;
+}
+
+.sum_form_style .label_trans label {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    margin-bottom: 0px;
+    color: #767676;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 50px;
+    z-index: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.sum_form_style .label_trans.focused label {
+    top: -6px;
+    margin-bottom: 0px;
+    color: #767676;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.sum_form_style .label_trans:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 2px;
+    width: 0;
+    z-index: 4;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.sum_form_style .label_trans.focused:after {
+    left: 0;
+    width: 100%;
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+ @media (max-width: 1200px){
+ }
+ @media (max-width: 768px)
+{
+    .menuText {
+    position: absolute;
+    top: 100px;
+    left: 10%;
+    right: 10%;
+    width: auto;
+}
+  .menu_heading h3
+    {
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 500;
+    }
+    
+
+}
+
+
+ @media (max-width: 580px){
+   .menuText
+    {
+        left: 5%;
+        right: 5%;   
+    } 
+    .menuText h1 {
+        font-size: 60px;
+    }
+    
+    
+ }
+ @media (max-width: 480px){
+    .menuText
+    {
+            
+
+    }
+    .menuText h1 {
+        font-size: 48px;
+    }
+ }
+ @media (max-width: 380px){
+    .menu_heading h3
+    {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    text-transform: capitalize;
+    }
+    
+ }
+ @media (max-width: 360px){
+ }
+ @media (max-width: 340px){
+ }
+
+
+
+/*@media (max-width: 640px)
+{
+.menu_heading{
+    width: 100%;
+   
+    
+    
+}
+.menu_heading1 {
+    width: 100%;
+    
+    
+    
+}
+
+.collapsed-menu
+{
+  width: 100%;
+}
+}*/
+
+
+/*-----------------------------*/
+/*--------Cart----------------*/
+
+
+/*.footer strong
+
+{
+  font-family: 'Amatic SC', cursive;
+}
+
+
+
+.column {
+  float: left;
+/*  width: 25%;
+*/
+ /* padding: 10px;*/
+
+
+/*background-color:#1e2327;
+}
+.column img
+{
+margin: 8px;
+}
+.column
+{
+  background-color: white;
+  color: black;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.boxx
+{
+    padding: 30px;
+  text-align: center;
+}
+.box1 p
+{
+    padding: 10px 10px 40px 10px;
+}
+
+.social
+{
+  text-align: center;
+  padding: 50px;
+}
+
+.social ul li
+{
+  list-style-type: none;
+  display: inline-block;
+}
+
+.fab {
+  padding: 20px;
+  font-size: 15px;
+  list-style: none;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 15px;
+  border-radius: 50%;
+  
+}
+.fab:hover
+{
+  opacity: 0.7;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+.bottomright {
+  position: absolute;
+  bottom: -198px;
+  right: 152px;
+  font-size: 18px;
+}
+.bottomleft {
+  
+  bottom: -150px;
+
+  font-size: 18px;
+  z-index: 1;
+}
+
+.row img
+{
+  padding: -30px;
+}
+.special
+{
+    background-color: #1e2327;
+}
+.special p
+{
+    color: white;
+}
+.text-white
+{
+    color:white;
+}
+
+.text-orange
+{
+    color: red;
+}
+.icon
+{
+    font-family: flaticon;
+}
+@media (max-width: 500px)
+{
+  .social
+  {
+    margin-left: -45px;
+  }
+   .shine
+      {
+        padding-top: 20px;  
+        padding-left: 58px;
+      
+      }
+  .social li a{
+list-style: none;
+font-size: 15 px;
+margin: 7px;
+
+      }
+      .input-group{
+        width: 82%;
+      }
+     
+}
+@media (max-width: 320px)
+{
+  .shine
+      {
+        padding-top: 0px;  
+        padding-left: 0px;
+      
+      }
+  .social
+  {
+    margin-left: -51px;
+  }
+  .social li a
+  {
+list-style: none;
+font-size: 15 px;
+margin: 2px;
+
+      }
+      .fab
+      {
+        padding: 11px;
+      }
+      .column h4
+      {
+        font-size: 16px;
+      }
+      .inc{
+        padding-top: 9%;
+      }
+  }
+@media (max-width: 400px)
+{
+  .social
+  {
+    padding: 35px;
+    margin-left: -22px;
+  }
+  .social ul li
+  {
+    margin: 3px;
+  }
+    
+    .shine
+      {
+        padding-top: 0px;  
+        padding-left: 0px;
+      
+      }
+
+}
+@media (max-width:800px )
+{
+  
+  .social
+  {
+    margin-left: -45px;
+  }
+   .shine
+      {
+        padding-top: 20px;  
+        padding-left: 58px;
+      
+      }
+  .social li a{
+list-style: none;
+font-size: 15 px;
+margin: 7px;
+
+      }
+      .input-group
+      {
+        width: 72%;
+      }
+      .euro .btn
+      {
+        font-size: initial; 
+      }
+    }
+
+.inc_dec {
+    display: flex;
+    margin-bottom: 14px;
+    justify-content: center;
+   /* display: none;*/
+/*}
+
+.item
+{
+    width: 100%;
+
+}
+.itemPrice
+{
+    padding: 5px;
+}
+
+.itemPrice p
+{
+    margin-bottom:0;
+}
+.custm
+{
+    font-size: 10px;
+    color:red;
+}
+.inc_dec input {
+    width: 30px;
+    background: transparent;
+    border-radius: 5px;
+    border: 1px solid red;
+    margin: 0px 10px;
+    height: 30px;
+    text-align: center;
+}
+
+.alter {
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid red;
+    margin: 0px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+}
+.flex-container
+    {
+        display:flex;
+        padding-bottom: 10px;
+    }
+
+.btn
+{
+  background-color:white;
+}
+.place
+{
+  border: 1px solid;
+    width: 200px;
+    height: 50px;
+    background: #f44336;
+    color: #fff;
+}
+.orderplace
+{
+  position: fixed;
+    bottom: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background: #f7f7f7;
+    width: 95%;
+}
+
+
+ 
+ /******************************/
+/********gallery***************/
+div.gallery {
+  margin: 5px;
+  border: 2px solid #080000;
+  float: left;
+  width: 217px;
+    padding: 18px 1px 0px 28px;
+
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+ height: 135px;
+ width: 152px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+.gallery-top h1
+{
+
+  text-align: center;
+  font-weight: bold;
+   font-family:'Kaushan Script', cursive;
+   background-color: #d32040;
+   border-radius: 50%;
+
+
+}
+@media (max-width:750px)
+{
+    .lock
+  {
+    padding-left: 107px;
+  }
+}
+
+
+@media (max-width:600px)
+{
+  .lock
+  {
+   margin: -55px;
+   padding-top:72px;
+  }
+  .gallery-top h1
+{
+   border-radius: 36%;
+}
+}
+@media (max-width:300px)
+{
+  .lock
+  {
+    padding-left:27px;
+  }
+}
+
+@media (max-width: 400px)
+{
+   .lock{
+padding-top: 50px;
+    padding-left:95px!important;
+    position: absolute;
+    padding-right: 20px;
+
+
+ }
+}
+
+@media (max-width: 500px)
+{
+   .lock
+   {
+    padding-left:175px;
+   }
+}
